@@ -28,13 +28,6 @@ function Spell(name,cost,description){
 
  
 
-
-
-
-
-
-
-
 /**
  * A spell that deals damage.
  * We want to keep this code DRY (Don't Repeat Yourself).
@@ -59,6 +52,13 @@ function Spell(name,cost,description){
  * @property {number} damage
  * @property {string} description
  */
+ function DamageSpell(name, cost, damage, description){
+  Spell.call(this, name, cost, description);
+
+ }
+
+  DamageSpell.prototype = new Spell();
+
 
 /**
  * Now that you've created some spells, let's create
