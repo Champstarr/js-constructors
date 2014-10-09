@@ -54,6 +54,7 @@ function Spell(name,cost,description){
  */
  function DamageSpell(name, cost, damage, description){
   Spell.call(this, name, cost, description);
+  this.damage = damage;
 
  }
 
@@ -74,6 +75,15 @@ function Spell(name,cost,description){
  * @property {boolean} isAlive  Default value should be `true`.
  */
 
+ function Spellcaster(name, health, mana){
+
+    this.name    = name;
+    this.health  = health;
+    this.mana    = mana;
+    this.isAlive = true;
+    
+    }
+
   /**
    * The spellcaster loses health equal to `damage`.
    * Health should never be negative.
@@ -83,6 +93,11 @@ function Spell(name,cost,description){
    * @name inflictDamage
    * @param  {number} damage  Amount of damage to deal to the spellcaster
    */
+   function inflictDamage (damage){
+    
+
+    
+   }
 
   /**
    * Reduces the spellcaster's mana by `cost`.
